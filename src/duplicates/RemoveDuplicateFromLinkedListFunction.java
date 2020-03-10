@@ -6,12 +6,12 @@ public class RemoveDuplicateFromLinkedListFunction {
         ListNode current = head;
         
         // In case there is no node at the original array
-        if(current == null){
-            return head;
-        }
+//        if(current == null){
+//            return head;
+//        }
         
         // Move the pointer to next or next next
-        while(current.next != null){
+        while(current != null && current.next != null){
             if(current.val == current.next.val){
                 current.next = current.next.next;
             } else {
